@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FB1A351-0411-45D6-9C7B-4EDCB5E7126B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>modelfirst2.ornek</RootNamespace>
+    <AssemblyName>modelfirst2.ornek</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Antrenor.cs">
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Baskan.cs">
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Baskanlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Baskanlar.Designer.cs">
+      <DependentUpon>Baskanlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Footballer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Footballer.Designer.cs">
+      <DependentUpon>Footballer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Futbol.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Futbol.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Futbol.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Futbol.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Futbol.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Futbolcu.cs">
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SK.cs">
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TD.Designer.cs">
+      <DependentUpon>TD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="unvanagorebaskan_Result.cs">
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <Compile Include="yasagorebaskan_Result.cs">
+      <DependentUpon>Futbol.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Baskanlar.resx">
+      <DependentUpon>Baskanlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Footballer.resx">
+      <DependentUpon>Footballer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="TD.resx">
+      <DependentUpon>TD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="Futbol.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Futbol.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Futbol.edmx.diagram">
+      <DependentUpon>Futbol.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Futbol.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Futbol.Context.cs</LastGenOutput>
+      <DependentUpon>Futbol.edmx</DependentUpon>
+    </Content>
+    <Content Include="Futbol.edmx.sql" />
+    <Content Include="Futbol.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Futbol.cs</LastGenOutput>
+      <DependentUpon>Futbol.edmx</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

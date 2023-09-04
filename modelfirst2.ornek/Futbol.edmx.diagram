@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="353ede0b94c6411b9ad2d10b4ddbd280" Name="Diagram1" >
+        <EntityTypeShape EntityType="Futbol.Futbolcu" Width="1.5" PointX="1.5" PointY="1" />
+        <EntityTypeShape EntityType="Futbol.Antrenor" Width="1.5" PointX="3.25" PointY="1" />
+        <AssociationConnector Association="Futbol.AntrenorFutbolcu" />
+        <EntityTypeShape EntityType="Futbol.SK" Width="1.5" PointX="6.75" PointY="1" />
+        <EntityTypeShape EntityType="Futbol.Baskan" Width="1.5" PointX="5" PointY="1" />
+        <AssociationConnector Association="Futbol.BaskanAntrenor" />
+        <AssociationConnector Association="Futbol.SKBaskan" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
