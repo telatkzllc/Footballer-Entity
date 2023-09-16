@@ -30,6 +30,8 @@ namespace modelfirst2.ornek
             Footballer go= new Footballer();
             go.Show();
             this.Hide();
+
+            //jjıjıjıjıjıjıjıjıjı;
         }
 
         private void button1_Click(object sender, EventArgs e)
